@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: flowguard
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: BEDROCK_MOCK
+        value: "true"
+      - key: SIMULATE_RING_DEVICE
+        value: "true"
+      - key: SIMULATE_ALEXA_SPEAKER
+        value: "true"

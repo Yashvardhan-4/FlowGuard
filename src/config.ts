@@ -18,7 +18,7 @@ export interface FlowGuardConfig {
 
 export const config: FlowGuardConfig = {
   port: parseInt(process.env.PORT || '3000', 10),
-  host: process.env.HOST || '127.0.0.1',
+  host: process.env.HOST || '0.0.0.0',
   logLevel: (process.env.LOG_LEVEL as FlowGuardConfig['logLevel']) || 'info',
   awsRegion: process.env.AWS_REGION || 'us-east-1',
   awsAccessKeyId: process.env.AWS_ACCESS_KEY_ID || undefined,
